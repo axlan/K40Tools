@@ -179,13 +179,13 @@ def parse_egv(f, plotter, properties=None):
                 is_finishing = False
                 break
             try:  # compact_mode command is only for NanoPlotter.
-                plotter.enter_compact_mode(speed=speed_code, harmonic_step=value_g)
+                plotter.enter_compact_mode(speed=speed_code, raster_step=value_g)
             except AttributeError:
                 pass
         elif cmd == b'F':  # finish
             is_compact = True
             try:  # compact_mode command is only for NanoPlotter.
-                plotter.enter_compact_mode(speed=speed_code, harmonic_step=value_g)
+                plotter.enter_compact_mode(speed=speed_code, raster_step=value_g)
             except AttributeError:
                 pass
         elif cmd == b'P':  # pop

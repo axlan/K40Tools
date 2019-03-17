@@ -8,9 +8,9 @@ import time
 
 from k40nano import NanoPlotter, SvgPlotter, PngPlotter, FileWriteConnection, PrintConnection, MockUsb
 
-from EgvParser import parse_egv
-from GcodeParser import parse_gcode
-from PngParser import parse_png
+from .EgvParser import parse_egv
+from .GcodeParser import parse_gcode
+from .PngParser import parse_png
 
 NANO_VERSION = "0.0.5"
 
